@@ -1,0 +1,47 @@
+section {
+margin:25px;
+border-radius: 15px;
+
+padding:5px;
+width:100%;
+
+}
+form {
+  
+  border-radius: 10px;
+  border:1px solid #e0dcd5;
+  padding: 10px;
+  display: flex;
+  box-shadow: 5px 5px 5px 5px #ddd8d0;;
+  flex-direction: column;
+  align-items: space-between;
+  justify-items: space-between;
+}
+
+.button-display {
+  font-family: 'Bungee' , sans-serif;
+  font-size: 0.8em;
+  margin:10px;
+  display:flex ;
+  flex-direction: row;
+  justify-content: space-between;
+}
+button {
+  margin:0;
+  color: white;
+  background-color: #4056a1;
+}
+
+#tweet-text {
+  font-size: 17px;
+  margin: 0;
+  padding: 2px;
+  border:none;
+  background-color: #f4f1ec;
+  border-bottom: grey solid 4px;
+}
+
+#tweet-text:focus {
+  
+  outline: none !important;
+}
