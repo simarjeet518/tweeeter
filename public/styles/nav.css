@@ -1,0 +1,23 @@
+nav span  {
+  font-family: 'Bungee' , sans-serif;
+}
+
+nav {
+  height: 120px;
+  width:100%;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position:absolute;
+  top: 0;
+}
+ 
+
+nav p{
+  font-size: 18px;
+  font-weight: normal;
+}
