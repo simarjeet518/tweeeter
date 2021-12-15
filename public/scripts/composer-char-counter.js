@@ -1,32 +1,27 @@
 $(document).ready(function() {
 
  const $newTweet = $("#tweet-text");              
- const $tweetButton = $("#submit-tweet");
- const $counter =$("output");      
+ const $tweetButton = $("#submit-tweet");     
  
 let keyCode ;
-  $newTweet.on('keydown',(e) => {
+$newTweet.on('keydown',(e) => {
   keyCode = e.keyCode;
    
  });
 
 
 $newTweet.on('input', function () {
-  let counter = Number($counter.val());
+  let counter = Number($(this).siblings().children('.counter').val());
   
-  if(keyCode === 8) {
+  if(keyCode === 8 || keyCode === 46) {    //key code for delete and backspace
     counter += 1
   } else {
   counter -= 1
   }
-
-  if(counter >135) {
-   // $counter.css({"color": "red"}
+  if(counter < 0) {
    $(this).siblings().children('.counter').css({"color": "red"})
-   //$(this).siblings().children('.counter').val(120);
-  }
-
-  $counter.val(counter);
+   }
+   $(this).siblings().children('.counter').val(counter);
 
  });
 
@@ -37,3 +32,4 @@ $tweetButton.on('click',function() {
 
 
 });
+
