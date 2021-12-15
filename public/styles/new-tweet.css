@@ -9,10 +9,10 @@ width:100%;
 form {
   
   border-radius: 10px;
-  border:1px solid #e0dcd5;
   padding: 10px;
   display: flex;
-  box-shadow: 5px 5px 5px 5px #ddd8d0;;
+ /* border:1px solid #e0dcd5;
+  box-shadow: 5px 5px 5px 5px #ddd8d0; */
   flex-direction: column;
   align-items: space-between;
   justify-items: space-between;
