@@ -1,4 +1,4 @@
-header {
+.avatar  {
   margin-top: 120px;
   height:400px;
   width:100%;
@@ -10,8 +10,3 @@ header {
   z-index: -1;
 }
 
-
-.avatar {
-  z-index: 5;
-    
-  }
