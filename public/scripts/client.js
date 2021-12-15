@@ -1,7 +1,9 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
+ 
+  
  function createTweetElement (tweetObj) {
-   
+  
     return `<article class="tweets" id="tweets">
              <header>
               <div id="user-avatar">
@@ -12,7 +14,7 @@ $(document).ready(function () {
             </header>
             <p>${tweetObj.content.text} </p>
             <footer>
-             <span>${tweetObj.created_at}</span>
+             <span>${timeago.format(tweetObj.created_at )}</span>
              <div class="icons">
                <i class="fas fa-flag"></i>
                <i class="fas fa-retweet"></i>
