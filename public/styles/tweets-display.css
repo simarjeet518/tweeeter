@@ -2,36 +2,46 @@
   font-size: medium;
   border:grey solid 2px;
   padding: 5px;
-  width:100%; 
+  width:100%;
+  margin-bottom: 25px;
 }
  .tweets:hover{
   box-shadow: 5px 5px 0px 0px #bdb7af;
  
   }
+  #user-avatar {
+    display:flex;
+
+  }
+  #user-avatar img{
+    width: 40px;
+    padding-right: 7px;
+  }
+  #user-avatar span {
+    align-self: center;
+    color:gray;
+    
+  }
   
   .tweets header {
-    padding:1em;
-    font-size: 20px;
+    padding:1em; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-
+  
   .tweets header span {
     color: rgb(184, 191, 197);
   }
 
-  .tweets i {
-    color: rgb(87, 84, 84);
-  }
-  
   .tweets p {
     size:40px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
     color: grey;
     border-bottom: grey solid 4px;
+    margin-bottom: 6px;
   }
 
   .tweets footer .fas  {
@@ -43,10 +53,10 @@
   } 
   
  footer {
-    margin-top:10px;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 10px;
   }
  
  
