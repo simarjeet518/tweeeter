@@ -16,8 +16,33 @@ nav {
   top: 0;
 }
  
+.new-tweet-icon {
+  display: flex;
+  flex-direction: column;
+}
 
 nav p{
   font-size: 18px;
   font-weight: normal;
+}
+
+.fas {
+  align-self: center;
+    color: red;
+}
+.fas {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+.fas {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
 }
