@@ -61,13 +61,17 @@ $(document).ready(function () {
 
   const formValidation =() =>{
     const $tweet = $("#tweet-text").val();
+    let error = "";
     if($tweet === ""|| $tweet === null) {
-        alert("Form should not be empty");
-      
-       return false;
+      error ="⚠️ you cannot submit empty form ,Please Enter something to tweet ⚠️"
+      $( "form" ).prepend( `<p class ="Error-box  hidden">${error}</p>` );
+      $('.Error-box').removeClass("hidden");
+      return false;
     } 
     if($tweet.length >140 ){
-      alert("tweet should not be more than 140 characters");
+      error ="⚠️ Too Long ,please Respect 140 chars limit ⚠️"
+      $( "form" ).prepend( `<p class ="Error-box hidden">${error}</p>` );
+      $('.Error-box').removeClass("hidden");
       return false;
     }
     return true;
