@@ -3,6 +3,7 @@
   border:grey solid 2px;
   padding: 5px;
   width:100%;
+  margin-top:25px;
   margin-bottom: 25px;
 }
  .tweets:hover{
@@ -29,7 +30,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   .tweets header span {
     color: rgb(184, 191, 197);
   }
