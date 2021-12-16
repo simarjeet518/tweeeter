@@ -16,28 +16,26 @@ $(document).ready(function() {
 
   });
 
+  const changeLayout =(color,image,displayicon,displaybtn) =>{
+    $("nav").css({"background-color":color});
+    $("nav").css({"background-image":image});
+    $(".new-tweet-icon").css({"display":displayicon});
+    $("#scroll-up").css({"display":displaybtn});
+  }
+
   $(document).scroll(function (){
     if($(window).scrollTop()>= 91){
-      $("nav").css({"background-color":"transparent"});
-      $(".new-tweet-icon").css({"display":"none"});
-      $("#scroll-up").css({"display":"block"});
-    } else {
-      $("#scroll-up").css({"display":"none"});
-      $("nav").css({"background-color":"#4056a1"});
-      $(".new-tweet-icon").css({"display":"block"});
-    }
+      changeLayout("transparent","none","none","block");
+      } else {
+      changeLayout("#4056a1","url(/images/black-paper.png)","block","none");
+      }
+ });
 
-   
-  });
- $("#scroll-up").on('click',()=> {
+  $("#scroll-up").on('click',()=> {
   $("#tweet-text").focus();
-  $("nav").css({"background-color":"#4056a1"});
-  $(".new-tweet-icon").css({"display":"block"});
-  $("#scroll-up").css({"display":"none"});
+  changeLayout("#4056a1","url(/images/black-paper.png)","block","none");
   $(window).scrollTop(0);
-  
-
- })
+});
 
 });
 

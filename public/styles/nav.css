@@ -16,19 +16,10 @@ nav {
   position:fixed;
   top: 0;
 }
-#click-new {
-  font-family: sans-serif;
-  }
-
-#click-new:hover{
-  font-family: 'Bungee' , sans-serif;
-  cursor: pointer;
-}
- 
 .new-tweet-icon {
   display: flex;
   flex-direction: column;
-  
+  text-align: center;
 }
 
 nav p{
@@ -45,13 +36,16 @@ nav p{
 .fa-angle-double-down {
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover 1s infinite  alternate;
+  cursor: pointer;
 }
-.fa-angle-double-down:hover {
+ .fa-angle-double-down:hover {
   -webkit-animation: mover 10s infinite  alternate;
   animation: mover 10s infinite  alternate;
+ 
 }
 
 @keyframes mover {
   0% { transform: translateY(0); }
   100% { transform: translateY(-8px); }
 }
+
