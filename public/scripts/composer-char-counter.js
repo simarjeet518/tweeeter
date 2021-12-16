@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
- const $newTweet = $("#tweet-text");              
- const $tweetButton = $("#submit-tweet");     
- 
+ const $newTweet = $("#tweet-text");                
  
  $newTweet.on('input', function () {
   let counter = Number($(this).siblings().children('.counter').val());
@@ -15,11 +13,6 @@ $(document).ready(function() {
     $(this).siblings().children('.counter').val(counter);
 
   });
-
- 
-$tweetButton.on('click',function() {
-
- });
 
 
 });
