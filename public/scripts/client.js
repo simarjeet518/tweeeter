@@ -1,12 +1,23 @@
 
 $(document).ready(function () {
-
+  let visible =true;
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
    
   }; 
+
+  $("#click-new").on('click',(event)=> {
+   if(visible){
+   $("form").hide();
+   visible =false;
+    } else {
+      $("form").show();
+      $("#tweet-text").focus();
+      visible=true;
+  }
+  });
 
  
   const createTweetElement = (tweetObj) => {
