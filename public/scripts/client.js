@@ -1,5 +1,13 @@
 
 $(document).ready(function () {
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+   
+  }; 
+
  
   const createTweetElement = (tweetObj) => {
 
@@ -11,7 +19,7 @@ $(document).ready(function () {
                 </div>
                 <span>${tweetObj.user.handle}</span>
               </header>
-              <p>${tweetObj.content.text} </p>
+              <p>${escape(tweetObj.content.text)} </p>
               <footer>
                 <span>${timeago.format(tweetObj.created_at)}</span>
                 <div class="icons">
@@ -23,10 +31,13 @@ $(document).ready(function () {
           </article>`
   }
  
+ 
+
   const renderTweets = (tweets) => {
     $("#display-tweets-conatiner").empty();
-    for (let tweet of tweets) {
-      $("#display-tweets-conatiner").append(createTweetElement(tweet));
+    let numberofTweets = tweets.length -1;
+    for (let i=numberofTweets; i>=0; i--) {
+      $("#display-tweets-conatiner").append(createTweetElement(tweets[i]));
     }
  
   }
@@ -62,18 +73,18 @@ $(document).ready(function () {
     return true;
    } 
  
-
+  
   $("form").on('submit', function (event) {
      
     event.preventDefault();
     const result = formValidation();
    if(result) {
-     console.log("inside agex",result);
     const formData = $(this).serialize();
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: formData,
+    //  dataType : "html",
       success: function () {
         loadTweets();
         $('#tweet-text').val('');
