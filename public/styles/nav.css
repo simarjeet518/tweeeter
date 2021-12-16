@@ -12,36 +12,45 @@ nav {
   display:flex;
   align-items: center;
   justify-content: space-between;
+  background-image: url(/images/black-paper.png);
   position:fixed;
   top: 0;
+}
+#click-new {
+  font-family: sans-serif;
+  }
+
+#click-new:hover{
+  font-family: 'Bungee' , sans-serif;
+  cursor: pointer;
 }
  
 .new-tweet-icon {
   display: flex;
   flex-direction: column;
+  
 }
 
 nav p{
   font-size: 18px;
   font-weight: normal;
+  
 }
 
 .fa-angle-double-down {
+  margin-top: -13px;
   align-self: center;
-    color: red;
+  color: red;
 }
 .fa-angle-double-down {
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover 1s infinite  alternate;
 }
-.fa-angle-double-down {
-  -webkit-animation: mover 1s infinite  alternate;
-  animation: mover 1s infinite  alternate;
+.fa-angle-double-down:hover {
+  -webkit-animation: mover 10s infinite  alternate;
+  animation: mover 10s infinite  alternate;
 }
-@-webkit-keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-8px); }
-}
+
 @keyframes mover {
   0% { transform: translateY(0); }
   100% { transform: translateY(-8px); }

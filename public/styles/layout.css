@@ -32,5 +32,22 @@ main {
   align-items: center;
   justify-content: center;
 }
+#scroll-up {
+  background-color:red;
+  border-radius: 50%;
+  color:black;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center; 
+  display: none;
+  margin-left:auto;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  cursor: pointer;
+  
+}
+ 
 
 

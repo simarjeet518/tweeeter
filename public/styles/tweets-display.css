@@ -1,9 +1,11 @@
+#display-tweets-conatiner {
+  width:100%;
+ 
+}
 .tweets {
   font-size: medium;
   border:grey solid 2px;
-  padding: 5px;
-  width:100%;
-  margin-top:25px;
+  padding: 5px; 
   margin-bottom: 25px;
 }
  .tweets:hover{
