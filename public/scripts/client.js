@@ -1,25 +1,28 @@
 
-$(document).ready(function () {
-  let visible =true;
-  const escape = function (str) {
+$(document).ready(function() {
+  let visible = true;     // variable is used when user click compose button on nav
+
+  //function for XSS
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
    
-  }; 
+  };
 
+  //compose button on nav on click form visibility changes
   $("#click-new").on('click',(event)=> {
-   if(visible){
-   $("form").hide();
-   visible =false;
+    if (visible) {
+      $("form").hide();
+      visible = false;
     } else {
       $("form").show();
       $("#tweet-text").focus();
-      visible=true;
-  }
+      visible = true;
+    }
   });
 
- 
+ //create new article tag (new tweets)
   const createTweetElement = (tweetObj) => {
 
     return `<article class="tweets" id="tweets">
@@ -39,82 +42,82 @@ $(document).ready(function () {
                   <i class="fas fa-heart"></i>
                 </div>
               </footer>
-          </article>`
-  }
+          </article>`;
+  };
  
  
-
+// render tweets backwards as new tweet at top ,data stores opposite (new tweet at bottom)
   const renderTweets = (tweets) => {
     $("#display-tweets-conatiner").empty();
-    let numberofTweets = tweets.length -1;
-    for (let i=numberofTweets; i>=0; i--) {
+    let numberofTweets = tweets.length - 1;
+    for (let i = numberofTweets; i >= 0; i--) {
       $("#display-tweets-conatiner").append(createTweetElement(tweets[i]));
     }
  
-  }
+  };
 
-  const loadTweets =  ( ) => {
+// load tweets with ajax
+  const loadTweets =  () => {
     
-    $.ajax({
-    url: '/tweets',
-    method: 'get'
-  })
-    .then((response) => {
-      renderTweets(response); 
+     $.ajax({
+      url: '/tweets',
+      method: 'get'
+    })
+      .then((response) => {
+        renderTweets(response);
       
-    })
-    .catch((error) => {
-      return error;
-    })
-    
-   
-  }
+      })
+      .catch((error) => {
+        return error;
+      });
+  };
 
-  const formValidation =() =>{
+  //form validation inserts errors in Error-box(labal class in form) , make it visible and return boolen used in ajax post request
+  const formValidation = () =>{
     const $tweet = $("#tweet-text").val();
     let error = "";
-    if($tweet === ""|| $tweet === null) {
-      error ="⚠️ you cannot submit empty form ,Please Enter something to tweet ⚠️"
-      $( "form" ).prepend( `<p class ="Error-box  hidden">${error}</p>` );
+    if ($tweet === "" || $tweet === null) {
+      error = "⚠️ you cannot submit empty form ,Please Enter something to tweet ⚠️";
+      $(".Error-box").text(error);
       $('.Error-box').removeClass("hidden");
       return false;
-    } 
-    if($tweet.length >140 ){
-      error ="⚠️ Too Long ,please Respect 140 chars limit ⚠️"
-      $( "form" ).prepend( `<p class ="Error-box hidden">${error}</p>` );
+    }
+    if ($tweet.length > 140) {
+      error = "⚠️ Too Long ,please Respect 140 chars limit ⚠️";
+      $(".Error-box").text(error);
       $('.Error-box').removeClass("hidden");
       return false;
     }
     return true;
-   } 
- 
-  
-  $("form").on('submit', function (event) {
-     
-    event.preventDefault();
-    const result = formValidation();
-   if(result) {
-    const formData = $(this).serialize();
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: formData,
-    //  dataType : "html",
-      success: function () {
-        loadTweets();
-        $('#tweet-text').val('');
-        $('.counter').val("140");
-      },
-    })
-  }  else {
     
-    $(this).children().focus();
-  }
-   });
-  
-loadTweets();
-  
+  };
  
+  
+  $("form").on('submit', function(event) {
+    event.preventDefault();
+    
+    const result = formValidation();   // form validates true
+    if (result) {
+      const formData = $(this).serialize();
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: formData,
+        success: function() {
+          loadTweets();               //if success load tweets and make text area empty,counter back to 140
+          $('#tweet-text').val('');
+          $('.counter').val("140");
+        },
+      });
+    }  else {
+   
+      $(this).children().focus();
+    }
+  
+  });
+  
+  loadTweets();  // called to tweet tweet on document ready
+
 
 });
 
