@@ -1,33 +1,49 @@
-section {
-margin:20px;
-border-radius: 15px;
+main {
+  width:90%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+section {
+margin-top:25px;
 padding:5px;
 width:100%;
-
 }
+
+/* validation error label disply styling*/
 .Error-box {
   padding:5px;
   font-size: 20px;
   color: indianred;
-  border:indianred solid 4px;
-  
+  border:indianred solid 2px;
+  background-color: #f4f1ec;
+  height: 35px;
+  margin-bottom: 10px;
+  position: absolute;
+  margin-top: -40px;
 }
+
+/*used in jQuery to hide elements */
 .hidden {
   display: none;
 }
+
+
 form {
-  
+  margin-top: 10px;
   border-radius: 10px;
   padding: 10px;
   display: flex;
- /* border:1px solid #e0dcd5;
-  box-shadow: 5px 5px 5px 5px #ddd8d0; */
   flex-direction: column;
   align-items: space-between;
   justify-items: space-between;
+  position: relative;
 }
 
+/* display styling for button and counter output*/
 .button-display {
   font-family: 'Bungee' , sans-serif;
   font-size: 0.8em;
@@ -41,10 +57,10 @@ button {
   color: white;
   background-color: #4056a1;
 }
-
+/* text area  styling*/
 #tweet-text {
-  font-size: 17px;
-  margin: 0;
+  
+  font-size: 13pt;
   padding: 2px;
   border:none;
   background-color: #f4f1ec;
@@ -52,6 +68,5 @@ button {
 }
 
 #tweet-text:focus {
-  
   outline: none !important;
 }
