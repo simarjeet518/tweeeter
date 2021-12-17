@@ -21,13 +21,17 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweets-display.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/responsive-design.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/Scroll-button.css" type="text/css" />
 
 
   <!-- External JS -->
-  <script type ="module" src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+  <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 
+
   <!-- App JS-->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -45,33 +49,34 @@
       <i class="fas fa-angle-double-down " id="click-new"></i>
     </div>
   </nav>
-  <header class="avatar">
+  <header class="avatar" id="avatar">
     <div>
       <img src="/images/profile-hex.png">
     </div>
     <br>
     <div>
-      <h2>Simar Dhaliwal</h2>
+      <h2><b>Amy</b> Dhaliwal</h2>
     </div>
-
-
   </header>
 
   <!-- Page-specific (main) content here -->
-  <main class="container" id ="tweets-container">
+  <main class="container" id="tweets-container">
     <section class="new-tweet">
+   <!-- Form -->
       <form method="POST" action="/tweets/">
-        <label for="tweet-text">What are you humming about?</label>
+        <label class="Error-box hidden"></label>
+        <label for="tweet-text" class="label">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="button-display">
           <button type="submit" id="submit-tweet">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
-        
-
       </form>
-    </section> 
-    <div id ="display-tweets-conatiner"></div>
+    </section>
+    <div id="display-tweets-conatiner">
+    <!-- conatiner to display article-->
+    </div>
+    <!-- Scroll up button-->
     <button id="scroll-up"><i class="fas fa-angle-double-up"></i>
     </button>
   </main>
