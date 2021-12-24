@@ -1,0 +1,26 @@
+/* destop size */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+    
+ #tweets-container {
+  margin-top:180px;
+  margin-left:100px;
+  margin-right: 40px;
+  width:70%;
+}
+  
+  #avatar { 
+  margin-top: 220px;
+  margin-left: 30px;
+  width:30%;
+  height:350px;
+  }
+
+  #avatar img {
+    width:230px;
+   
+  }
+}

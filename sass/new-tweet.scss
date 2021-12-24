@@ -1,5 +1,5 @@
 main {
-  width: 90%;
+  width:90%;
   display: flex;
   margin: auto;
   flex-direction: column;
@@ -8,17 +8,17 @@ main {
 }
 
 section {
-  margin-top: 25px;
-  padding: 5px;
-  width: 100%;
+margin-top:25px;
+padding:5px;
+width:100%;
 }
 
 /* validation error label disply styling*/
 .Error-box {
-  padding: 5px;
+  padding:5px;
   font-size: 20px;
   color: indianred;
-  border: indianred solid 2px;
+  border:indianred solid 2px;
   background-color: #f4f1ec;
   height: 35px;
   margin-bottom: 10px;
@@ -30,6 +30,7 @@ section {
 .hidden {
   display: none;
 }
+
 
 form {
   margin-top: 10px;
@@ -44,25 +45,24 @@ form {
 
 /* display styling for button and counter output*/
 .button-display {
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee' , sans-serif;
   font-size: 0.8em;
-  margin: 10px;
-  display: flex;
+  margin:10px;
+  display:flex ;
   flex-direction: row;
   justify-content: space-between;
 }
-
 button {
-  margin: 0;
+  margin:0;
   color: white;
   background-color: #4056a1;
 }
-
 /* text area  styling*/
 #tweet-text {
+  
   font-size: 13pt;
   padding: 2px;
-  border: none;
+  border:none;
   background-color: #f4f1ec;
   border-bottom: grey solid 4px;
 }

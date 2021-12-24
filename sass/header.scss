@@ -1,0 +1,24 @@
+/* avatar class for header image and h2 tag*/
+
+.avatar  {
+  margin-top: 100px;
+  margin-bottom: 20PX;
+  height:380px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#ebaf37;
+  background-image: url(/images/black-paper.png); 
+}
+
+.avatar img {
+  margin-top:40px;
+}
+.avatar h2 {
+ color: #FFFFFF;
+ margin-top: 0;
+ font-weight: normal;  
+}
+
+

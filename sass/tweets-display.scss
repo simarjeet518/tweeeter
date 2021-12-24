@@ -1,48 +1,48 @@
 #display-tweets-conatiner {
-  width: 100%;
+  width:100%; 
 }
 
 /* article tag class*/
 .tweets {
   font-size: medium;
-  border: grey solid 2px;
-  padding: 5px;
+  border:grey solid 2px;
+  padding: 5px; 
   margin-bottom: 25px;
 }
 
-.tweets:hover {
+.tweets:hover{
   box-shadow: 5px 5px 0px 0px #bdb7af;
 }
 
 #user-avatar {
-  display: flex;
+  display:flex;
 }
 
 /*img in tweets box(users) */
-#user-avatar img {
+#user-avatar img{
   width: 40px;
   padding-right: 7px;
 }
 
 #user-avatar span {
   align-self: center;
-  color: gray;
+  color:gray;
 }
-
+  
 .tweets header {
-  padding: 1em;
+  padding:1em; 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .tweets header span {
-  color: #b8bfc5;
+  color: rgb(184, 191, 197);
 }
 
 /*tweets in article box */
 .tweets p {
-  size: 40px;
+  size:40px;
   padding-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
@@ -52,17 +52,21 @@
 }
 
 /* all three font awesome icon flag and all*/
-.tweets footer .fas {
+.tweets footer .fas  {
   color: #4056a1;
 }
 
-.tweets footer .fas:hover {
+.tweets footer .fas:hover{
   color: orange;
-}
-
+} 
+  
 footer {
-  display: flex;
+  display:flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 10px;
 }
+ 
+ 
+
+ 

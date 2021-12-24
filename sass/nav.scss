@@ -1,22 +1,21 @@
-nav span {
-  font-family: "Bungee", sans-serif;
+nav span  {
+  font-family: 'Bungee' , sans-serif;
 }
 
 nav {
   height: 120px;
-  width: 100%;
+  width:100%;
   background-color: #4056a1;
   color: #FFFFFF;
   padding-right: 1.5em;
   padding-left: 1.5em;
-  display: flex;
+  display:flex;
   align-items: center;
   justify-content: space-between;
   background-image: url(/images/black-paper.png);
-  position: fixed;
+  position:fixed;
   top: 0;
 }
-
 /*class for p tag double angle at top*/
 .new-tweet-icon {
   display: flex;
@@ -24,9 +23,10 @@ nav {
   text-align: center;
 }
 
-nav p {
+nav p{
   font-size: 18px;
   font-weight: normal;
+  
 }
 
 .fa-angle-double-down {
@@ -36,21 +36,18 @@ nav p {
 }
 
 .fa-angle-double-down {
-  -webkit-animation: mover 1s infinite alternate;
-  animation: mover 1s infinite alternate;
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
   cursor: pointer;
 }
-
-.fa-angle-double-down:hover {
-  -webkit-animation: mover 10s infinite alternate;
-  animation: mover 10s infinite alternate;
+ .fa-angle-double-down:hover {
+  -webkit-animation: mover 10s infinite  alternate;
+  animation: mover 10s infinite  alternate;
+ 
 }
 
 @keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-8px);
-  }
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
 }
+
